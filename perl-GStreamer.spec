@@ -6,7 +6,7 @@
 %define		pnam	GStreamer
 Summary:	Perl gstreamer bindings
 Summary(pl):	Wi±zania gstreamer dla Perla
-Name:		perl-Gnome2-GStreamer
+Name:		perl-GStreamer
 Version:	0.09
 Release:	1
 License:	LGPL
