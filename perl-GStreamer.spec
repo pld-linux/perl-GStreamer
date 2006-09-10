@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	GStreamer
 Summary:	Perl gstreamer bindings
-Summary(pl):	Wi±zania gstreamer dla Perla
+Summary(pl):	Wi±zania gstreamera dla Perla
 Name:		perl-GStreamer
 Version:	0.09
 Release:	1
@@ -27,7 +27,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides Perl access to gstreamer library.
 
 %description -l pl
-Ten modu³ daje dostêp z poziomu Perla do biblioteki gstreamer.
+Ten modu³ daje dostêp z poziomu Perla do biblioteki gstreamera.
 
 %prep
 %setup -q -n %{pnam}-%{version}
@@ -47,18 +47,18 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pnam}/*.pod
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pnam}/*/*.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*/*.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorarch}/%{pnam}.pm
-%dir %{perl_vendorarch}/%{pnam}
-%dir %{perl_vendorarch}/auto/%{pnam}
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pnam}/*.so
-%{perl_vendorarch}/%{pnam}/Install
-%{perl_vendorarch}/auto/%{pnam}/*.bs
+%{perl_vendorarch}/GStreamer.pm
+%dir %{perl_vendorarch}/GStreamer
+%{perl_vendorarch}/GStreamer/Install
+%dir %{perl_vendorarch}/auto/GStreamer
+%attr(755,root,root) %{perl_vendorarch}/auto/GStreamer/*.so
+%{perl_vendorarch}/auto/GStreamer/*.bs
 %{_mandir}/man3/*
