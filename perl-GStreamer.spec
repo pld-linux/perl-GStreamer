@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	GStreamer
 Summary:	Perl gstreamer bindings
-Summary(pl):	Wi±zania gstreamera dla Perla
+Summary(pl.UTF-8):   WiÄ…zania gstreamera dla Perla
 Name:		perl-GStreamer
 Version:	0.09
 Release:	1
@@ -26,8 +26,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module provides Perl access to gstreamer library.
 
-%description -l pl
-Ten modu³ daje dostêp z poziomu Perla do biblioteki gstreamera.
+%description -l pl.UTF-8
+Ten moduÅ‚ daje dostÄ™p z poziomu Perla do biblioteki gstreamera.
 
 %prep
 %setup -q -n %{pnam}-%{version}
