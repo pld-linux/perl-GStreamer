@@ -17,10 +17,10 @@ URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gstreamer-devel >= 0.10.9
 BuildRequires:	perl-ExtUtils-Depends >= 0.205
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.07
-BuildRequires:	perl-Glib >= 1.132
+BuildRequires:	perl-Glib >= 1.180
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-Glib >= 1.132
+Requires:	perl-Glib >= 1.180
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
