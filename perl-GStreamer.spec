@@ -7,12 +7,12 @@
 Summary:	Perl gstreamer bindings
 Summary(pl.UTF-8):	Wiązania gstreamera dla Perla
 Name:		perl-GStreamer
-Version:	0.09
-Release:	3
-License:	LGPL
+Version:	0.11
+Release:	1
+License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	4f6f27edded250b00055d076eb738ff5
+# Source0-md5:	8f20eab443b3b608b465918a05188585
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gstreamer-devel >= 0.10.9
 BuildRequires:	perl-ExtUtils-Depends >= 0.205
@@ -45,7 +45,7 @@ Ten moduł daje dostęp z poziomu Perla do biblioteki gstreamera.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*.pod
@@ -56,10 +56,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog NEWS README TODO
 %{perl_vendorarch}/GStreamer.pm
 %dir %{perl_vendorarch}/GStreamer
 %{perl_vendorarch}/GStreamer/Install
 %dir %{perl_vendorarch}/auto/GStreamer
-%attr(755,root,root) %{perl_vendorarch}/auto/GStreamer/*.so
-%{perl_vendorarch}/auto/GStreamer/*.bs
-%{_mandir}/man3/*
+%attr(755,root,root) %{perl_vendorarch}/auto/GStreamer/GStreamer.so
+%{perl_vendorarch}/auto/GStreamer/GStreamer.bs
+%{_mandir}/man3/GStreamer*.3pm*
