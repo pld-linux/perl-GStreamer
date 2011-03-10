@@ -11,7 +11,7 @@ Version:	0.15
 Release:	2
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
-Source0:	http://dl.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
 # Source0-md5:	a01261f5a1012f4d6763e3721f1c9de7
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gstreamer-devel >= 0.10.9
@@ -48,8 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*.pod
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*/*.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*/*.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
