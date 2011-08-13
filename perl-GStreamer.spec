@@ -7,17 +7,17 @@
 Summary:	Perl gstreamer bindings
 Summary(pl.UTF-8):	Wiązania gstreamera dla Perla
 Name:		perl-GStreamer
-Version:	0.15
-Release:	2
+Version:	0.16
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://downloads.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	a01261f5a1012f4d6763e3721f1c9de7
+# Source0-md5:	e2d51158f3c671c0e4c11a82c9171b2b
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gstreamer-devel >= 0.10.9
 BuildRequires:	perl-ExtUtils-Depends >= 0.205
 BuildRequires:	perl-ExtUtils-PkgConfig >= 1.07
-BuildRequires:	perl-Glib >= 1.180
+BuildRequires:	perl-Glib-devel >= 1.180
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Glib >= 1.180
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README TODO
+%doc ChangeLog.pre-git NEWS README TODO
 %{perl_vendorarch}/GStreamer.pm
 %dir %{perl_vendorarch}/GStreamer
 %{perl_vendorarch}/GStreamer/Install
