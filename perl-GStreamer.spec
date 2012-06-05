@@ -1,18 +1,18 @@
 #
 # Conditional build:
-%bcond_with	tests	# perform "make test" (requires X server)
+%bcond_with	tests	# perform "make test" (requires some plugins to be operational)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	GStreamer
 Summary:	Perl gstreamer bindings
 Summary(pl.UTF-8):	Wiązania gstreamera dla Perla
 Name:		perl-GStreamer
-Version:	0.16
+Version:	0.17
 Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://downloads.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	e2d51158f3c671c0e4c11a82c9171b2b
+# Source0-md5:	8fe097daf0e2534452a3f69af05ec9fd
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gstreamer-devel >= 0.10.9
 BuildRequires:	perl-ExtUtils-Depends >= 0.205
