@@ -75,7 +75,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/GStreamer
 %dir %{perl_vendorarch}/auto/GStreamer
 %attr(755,root,root) %{perl_vendorarch}/auto/GStreamer/GStreamer.so
-%{perl_vendorarch}/auto/GStreamer/GStreamer.bs
 %{_mandir}/man3/GStreamer*.3pm*
 
 %files devel
