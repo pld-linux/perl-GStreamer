@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires some plugins to be operational)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pnam	GStreamer
 Summary:	Perl gstreamer bindings
 Summary(pl.UTF-8):	Wiązania gstreamera dla Perla
