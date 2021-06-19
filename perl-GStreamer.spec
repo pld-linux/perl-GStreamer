@@ -6,12 +6,12 @@
 Summary:	Perl gstreamer bindings
 Summary(pl.UTF-8):	Wiązania gstreamera dla Perla
 Name:		perl-GStreamer
-Version:	0.20
-Release:	7
+Version:	0.21
+Release:	1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
-Source0:	http://downloads.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
-# Source0-md5:	c848ea3dca4017953755f787dc8add8f
+Source0:	https://downloads.sourceforge.net/gtk2-perl/%{pnam}-%{version}.tar.gz
+# Source0-md5:	53148def26536ff33cb745a60801bf8d
 URL:		http://gtk2-perl.sourceforge.net/
 BuildRequires:	gstreamer0.10-devel >= 0.10.9
 BuildRequires:	perl-ExtUtils-Depends >= 0.205
@@ -26,8 +26,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module provides Perl access to gstreamer library.
 
+Note: this module is deprecated and no longer maintained.
+
 %description -l pl.UTF-8
 Ten moduł daje dostęp z poziomu Perla do biblioteki gstreamera.
+
+Uwaga: ten moduł jest przestarzały i nie jest już utrzymywany.
 
 %package devel
 Summary:	Development files for Perl GStreamer bindings
@@ -62,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer.pod
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*.pod
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/GStreamer/*/*.pod
 
